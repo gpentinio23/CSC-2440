@@ -9,8 +9,6 @@ def userInput():
         print("Invalid Input, Not a string")
     return set1, set2
 def uncommonConcat(s1,s2):
-    #Checks what letters are shared between the two sets
-    s1.intersection(s2)
     #Checks what letters are not shared between the two sets
     uncommonFirstSet = s1-s2
     uncommonSecondSet = s2-s1
