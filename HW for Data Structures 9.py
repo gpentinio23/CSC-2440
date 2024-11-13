@@ -14,7 +14,7 @@ def insert(root,key):
     else:
         root.left=insert(root.left,key)
     return root
-
+#Using inorder traversal to print the tree
 def inorder(root):
     if root:
         inorder(root.left)
@@ -22,9 +22,11 @@ def inorder(root):
         inorder(root.right)
 
 def userInput():
+    #Takes the root node
     rootVal = int(input("Enter root value"))
     root = Node(rootVal)
     while True:
+        #Takes all the inputs and inserts them
         values = int(input("Enter values of tree, 0 when done"))
         if values == 0:
             break
@@ -37,6 +39,7 @@ def divisibleByFive(root):
         return 0
     if root.val % 5 == 0:
         tot += root.val
+    #After checking the root node, we traverse each side of the tree
     tot+=divisibleByFive(root.left)
     tot+=divisibleByFive(root.right)
 
